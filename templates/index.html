@@ -32,8 +32,8 @@
 
 <div class="cards">
     {% for we in weather %}
-    <!--<div class = {{ "card {}".format(we.time) }} > -->
-    <div class ="card day">
+    <div class ="card {{ we.time }}" >
+    <!-- <div class ="card day"> -->
         <div class="delete-wrapper">
             <form action="#" method="POST">
                 <input type="hidden" name='delete' value={{ we.id }}>

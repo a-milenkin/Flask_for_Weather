@@ -55,13 +55,11 @@ def delete(city_id):
 def index():
     print('KIND', request.method)
     if request.method == 'POST':
-        try:
-            act = list(request.form.keys())[0]
-            if act =='delete':
-                del_ths_city = list(request.form.values())[0]
-                return redirect('/delete/'+del_ths_city)
-        except:
-            pass
+        act = list(request.form.keys())[0]
+        if act =='delete':
+            del_ths_city = list(request.form.values())[0]
+            return redirect('/delete/'+del_ths_city)
+
 
         try:
             city = request.form['city_name']
